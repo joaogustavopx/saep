@@ -1,0 +1,22 @@
+public function addConcessionaria($id,$concessionaria){
+        try{
+            $sql= "Insert into concessionaria values (?,?,?,?,?)";
+            $stmt = Conexao::getConexao()->prepare($sql);
+            $stmt -> bindValue(1,$id,"Atena Concessionaria", $concessionaria);
+            $stmt -> bindValue(2,$id,"Demetir concessionaria", $concessionaria);
+            $stmt -> bindValue(3,$id,"Hera concessionaria", $concessionaria);
+            $stmt -> bindValue(4,$id,"Estia concessionaria", $concessionaria);
+            $stmt -> bindValue(5,$id,"Persefone concessionaria", $concessionaria);
+            $stmt->execute();
+            return "Concessionaria Cadastrada com sucesso";
+        } 
+        catch (PDOException $ex) {
+            if($ex->errorInfo[1] == 1062)
+            {
+                return 'Concessionaria já cadastrado';
+            } else{
+                return 'Erro ao cadastrar Concessionaria';
+            }
+
+        }
+    }
