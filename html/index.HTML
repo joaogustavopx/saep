@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <title>Página inicial</title>
+</head>
+<body>
+    <div class="container">
+        <header class="row clearfix">
+            <img alt="" src="bootstrap/img/concessionaria.jpg" style="width: 50%; height: auto;"><!-- add foto logomarca -->
+        </header>
+        <nav class="row clearfix">
+            <h4> Menu</h4><hr> <!-- Add lista menu --> 
+        </nav>
+
+        <div class="row clearfix">
+            <!-- Seção de Cadastro -->
+            <section class="col-md-6">
+                <form method="POST" action="index.HTML">
+                    <h6><strong>Efetue Cadastro</strong></h6> <!-- Campo de cadastro -->
+                    <p><input type="id" name="id" style="border-color:rgb(105, 76, 139)" placeholder="Digite sua matricula" required/></p>
+                    <p><input type="password" name="senha" style="border-color:rgb(105, 76, 139)" placeholder="Digite sua senha" required/></p>
+                    <p><button name="login" type="submit" style="background-color:rgb(105, 76, 139); border-color:rgb(105, 76, 139)">
+                        <font color="white">Cadastrar</font></button></p> 
+                </form>
+            </section>
+
+            <!-- Seção de Login -->
+            <section class="col-md-6">
+                <form method="get" action="home.HTML"> <!-- Redireciona para home.html após o login -->
+                    <h6><strong>Efetue o login</strong></h6>
+                    <p><input type="email" name="email" style="border-color:rgb(105, 76, 139)" placeholder="Digite seu email" required/></p>
+                    <p><input type="password" name="senha" style="border-color:rgb(105, 76, 139)" placeholder="Digite sua senha" required/></p>
+                    <label class="checkbox">
+                        <input type="checkbox" name="lembrete">Lembrar Senha
+                    </label>
+                    <p><button name="login" type="submit" style="background-color:rgb(105, 76, 139); border-color:rgb(105, 76, 139)">
+                        <font color="white">Entrar</font></button></p> 
+                </form>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

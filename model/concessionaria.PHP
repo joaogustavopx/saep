@@ -4,7 +4,7 @@ class Concessionaria{
 
     public function cadastraConcessionaria($id,$concessionaria){
         try{
-            $sql= "Insert into concessionaria values (?,?)";
+            $sql= "INSERT INTO concessionaria values (?,?)";
             $stmt = Conexao::getConexao()->prepare($sql);
             $stmt -> bindvalue(1,$id);
             $stmt -> bindvalue(2,$concessionaria);
@@ -24,7 +24,7 @@ class Concessionaria{
 
     public function validaConcessionaria($id,$concessionaria){
         try{
-            $sql = 'select * from concessionaria where id=? and concessionaria=?';
+            $sql = 'SELECT * FROM concessionaria where id=? and concessionaria=?';
             $stmt = Conexao::getConexao()->prepare($sql);
             $stmt -> bindvalue(1,$id);
             $stmt -> bindvalue(2,$concessionaria);
@@ -40,7 +40,7 @@ class Concessionaria{
     public function removeConcessionaria($id) 
     {
         try{
-            $sql = "delete from concessionaria where id=?";  
+            $sql = "DELETE FROM concessionaria where id=?";  
             $stmt = Conexao::getConexao()->prepare($sql);
             $stmt->bindValue(1,$id);   
             $stmt->execute();
