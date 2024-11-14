@@ -5,7 +5,7 @@ class alocacao{
     public function cadastraAlocacao($id, $area, $automovel, $quantidade, $fk_concessionaria_id){
 
         try{
-            $sql= "Insert into alocacao values (?,?,?,?,?)";
+            $sql= "INSERT INTO alocacao values (?,?,?,?,?)";
             $stmt = Conexao::getConexao()->prepare($sql);
             $stmt -> bindValue(1,$id);
             $stmt -> bindValue(2,$area);
@@ -29,7 +29,7 @@ class alocacao{
 
     public function validaAlocacao($id, $area){
         try{
-            $sql= "select * from alocacao where id=? and area?";
+            $sql= "SELECT * FROM alocacao where id=? and area?";
             $stmt = Conexao::getConexao()->prepare($sql);
             $stmt -> bindValue(1, $id);
             $stmt -> bindValue(2, $area);
@@ -47,7 +47,7 @@ class alocacao{
     public function removeAlocacao($id) 
     {
         try{
-            $sql = "delete from alocacao where id=?";  
+            $sql = "DELETE FROM alocacao where id=?";  
             $stmt = Conexao::getConexao()->prepare($sql);
             $stmt->bindValue(1,$id);   
             $stmt->execute();

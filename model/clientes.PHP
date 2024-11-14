@@ -3,7 +3,7 @@
 class Clientes{
     public function cadastraCliente($id,$nome){
         try{
-            $sql = "insert into clientes values (?,?)";
+            $sql = "INSERT INTO clientes values (?,?)";
             $stmt= Conexao::getConexao()->prepare($sql);
             $stmt -> bindValue(1,$id);
             $stmt -> bindValue(2,$nome);
@@ -24,7 +24,7 @@ class Clientes{
 
     public function validaCliente($id,$nome){
         try{
-        $sql = "select * from clientes where id=? and nome=?";
+        $sql = "SELECT * FROM clientes where id=? and nome=?";
         $stmt= Conexao::getConexao()->prepare($sql);
         $stmt -> bindValue(1,$id);
         $stmt -> bindValue(2,$nome);
@@ -39,7 +39,7 @@ class Clientes{
     public function removeCliente($id) 
     {
         try{
-            $sql = "delete from clientes where id=?";  
+            $sql = "DELETE FROM clientes where id=?";  
             $stmt = Conexao::getConexao()->prepare($sql);
             $stmt->bindValue(1,$id);   
             $stmt->execute();

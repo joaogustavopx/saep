@@ -1,12 +1,12 @@
 <?php
         
         include './model/conexao.php';
-        //include './model/concessionaria.php';
-        //include './model/alocacao.php';
+        include './model/concessionaria.php';
+        include './model/alocacao.php';
         include './model/automoveis.php';
-        //include './model/clientes.PHP';
-        //include './model/venda.PHP';
-        //include './control/controller.php';
+        include './model/clientes.PHP';
+        include './model/venda.PHP';
+        include './control/controller.php';
 
         /*$c = new controller();
         
@@ -18,18 +18,18 @@
         /*$a = new Concessionaria();
         print_r ($a->cadastraConcessionaria(1, "Atena concessionaria"));*/ //funcionando
 
-        /*$b = new alocacao();
-        print_r ($b->cadastraAlocacao(2,3,4,5,1));*/ //funcionando
+        /* $b = new alocacao();
+        print_r ($b->cadastraAlocacao(2,3,4,5,1)); //funcionando */
 
-        $c = new automoveis();
-        print_r ($c->cadastraAutomovel(1,"Fiat uno", 43.115)); 
-
+         /* $c = new automoveis();
+        print_r ($c->cadastraAutomovel(1,"Toyota Supra", 15000000,1)); 
+  */
         /*$d = new Clientes();
         print_r ($d->cadastraCliente(1, "amanda")); */ //funcionando
 
-        /*$e = new venda();
-        print_r ($e->cadastraVenda(3,4,5)); //erro
-        //echo "aqui";*/
+        $e = new Venda();
+        print_r ($e->cadastraVenda(2,2,2)); //erro
+        //echo "aqui";
 
         
 
