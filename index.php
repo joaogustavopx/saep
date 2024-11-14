@@ -16,24 +16,19 @@
         if($c->loginIndex) echo $c->loginIndex;*/
          
         /*$a = new Concessionaria();
-        print_r ($a->cadastraConcessionaria(1, "Atena concessionaria"));*/ //funcionando
+        print_r ($a->cadastraConcessionaria(1, "Atena concessionaria"));*/ 
 
         /* $b = new alocacao();
-        print_r ($b->cadastraAlocacao(2,3,4,5,1)); //funcionando */
+        print_r ($b->cadastraAlocacao(1,1,1,1,1));  */
 
          /* $c = new automoveis();
-        print_r ($c->cadastraAutomovel(1,"Toyota Supra", 15000000,1)); 
+        print_r ($c->cadastraAutomovel(1,"Toyota Supra", 15000000,1));
   */
         /*$d = new Clientes();
-        print_r ($d->cadastraCliente(1, "amanda")); */ //funcionando
+        print_r ($d->cadastraCliente(1, "amanda")); */ 
 
         $e = new Venda();
-        print_r ($e->cadastraVenda(2,2,2)); //erro
-        //echo "aqui";
-
-        
-
-
+        print_r ($e->cadastraVenda(1,1,1)); 
 
 ?>
 
