@@ -14,6 +14,10 @@ public function cadastraAutomovel($id, $modelo, $preco, $fk_alocacao_id) {
 
         return "Automóvel cadastrado com sucesso!";
     } catch (PDOException $ex) {
+<<<<<<< HEAD
+=======
+        // Exibe o erro completo do PDO para ajudar na depuração
+>>>>>>> 2ff7f3cf2a363920a21716fe7c9e3bee41f39101
         return 'Erro ao cadastrar Automóvel: ' . $ex->getMessage();
     }
 }
